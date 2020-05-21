@@ -1,0 +1,26 @@
+{
+  "name": "docker-tech-talks-acc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroSantos42/docker-tech-talks-acc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroSantos42/docker-tech-talks-acc/issues"
+  },
+  "homepage": "https://github.com/PedroSantos42/docker-tech-talks-acc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
