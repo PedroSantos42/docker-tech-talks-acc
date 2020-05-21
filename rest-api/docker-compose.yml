@@ -4,8 +4,20 @@ services:
   backend:
     image: tech-talks-backend:latest
     container_name: tt-back
+    depends_on:
+      - database
     volumes:
       - ./src/:/usr/app/src/
     ports:
       - 3000:3000
     command: npm start
+
+  database:
+    image: mongo:4
+    container_name: tt-mongodb
+    ports:
+      - 27017:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root123

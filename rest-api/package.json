@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js"
-    // "start": "./node_modules/nodemon/bin/nodemon.js -L src/server.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js -L src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,8 @@
   },
   "homepage": "https://github.com/PedroSantos42/docker-tech-talks-acc#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.15"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
