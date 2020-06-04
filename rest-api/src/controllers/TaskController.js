@@ -21,7 +21,7 @@ class TaskController {
                 return data
             } else {
                 const data = await Task.find()
-            
+
                 return res.status(200).send(data)
             }
         } catch (err) {
@@ -39,10 +39,6 @@ class TaskController {
         } catch (err) {
             res.status(400).send(err)
         }
-    }
-
-    async delete(req, res) {
-        // TO DO
     }
 }
 
