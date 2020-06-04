@@ -4,7 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js -L src/server.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js -L src/server.js",
+    "sonar": "node sonar-project.js",
+    "test": "jest --coverage --detectOpenHandles"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "coverage",
+    "reportFile": "test-reporter.xml",
+    "indent": 4
   },
   "repository": {
     "type": "git",
@@ -19,9 +33,13 @@
   "homepage": "https://github.com/PedroSantos42/docker-tech-talks-acc#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.15"
+    "jest": "^26.0.1",
+    "mongoose": "^5.9.17"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "jest-sonar-reporter": "^2.0.0",
+    "nodemon": "^2.0.4",
+    "sonarqube-scanner": "^2.6.0",
+    "supertest": "^4.0.2"
   }
 }

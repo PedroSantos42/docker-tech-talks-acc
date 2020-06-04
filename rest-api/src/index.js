@@ -7,7 +7,7 @@ class App {
         this.express = express()
         this.middlewares()
         this.routes()
-        this.database();
+        this.database()
     }
 
     middlewares() {
@@ -19,9 +19,9 @@ class App {
     }
 
     database() {
-        mongoose.connect('mongodb://tt-mongodb:27017/tech-talks-database', {
-            keepAlive: 1, useUnifiedTopology: true, useNewUrlParser: true
-        }, (err) => err ? console.log(err) : console.log('Conectado ao MongoDB...'));
+        const mongoURL = 'mongodb://admin:password123@tt-mongodb:27017/tech-talks-database?authSource=admin'
+        const mongoOptions = { keepAlive: 1, useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }
+        mongoose.connect(mongoURL, mongoOptions, (err) => err ? console.log(err) : console.log('Conectado ao MongoDB...'))
         mongoose.set('useCreateIndex', true)
     }
 }
