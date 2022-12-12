@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/PedroSantos42/docker-tech-talks-acc#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jest": "^26.0.1",
     "mongoose": "^5.9.17"
   },
